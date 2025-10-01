@@ -30,7 +30,7 @@ public class Hilo implements Runnable {
         } catch (InterruptedException ie) {
             System.out.println("Fallo en el hilo " + n1);
         }
-        System.out.println("--- FIN " + t.getId() + " - " + t.getName() + ": TERMINADO ---");
+        System.out.println("--- FIN " + t.getId() + " - " + t.getName() + ": TERMINADO -");
     }
     private boolean esPrimo(int num) {
         if (num < 2) {
