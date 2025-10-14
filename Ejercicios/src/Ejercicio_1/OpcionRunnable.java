@@ -3,8 +3,8 @@ package Ejercicio_1;
 import java.util.Random;
 
 public class OpcionRunnable implements Runnable{
-    private int n1;
-    private int n2;
+    private final int n1;
+    private final int n2;
 
     public OpcionRunnable(int n1, int n2){
         this.n1 = n1;
@@ -17,7 +17,7 @@ public class OpcionRunnable implements Runnable{
 
             for (int i = n2+1; i < n1; i++){
                 System.out.println(i);
-                int sleepTimer = r.nextInt(999)+1;
+                int sleepTimer = r.nextInt(0,1000)+1;
                 Thread.sleep(sleepTimer);
             }
         } catch (InterruptedException ie) {
