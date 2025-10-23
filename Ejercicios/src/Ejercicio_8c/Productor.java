@@ -29,24 +29,6 @@ public class Productor implements Runnable{
                 lista.notify();
             }
         }
-//        while(true){
-//
-//                while(lista.size() <= 5){
-//                    try {
-//                        int randomTime = (int) (Math.random() * (1000 - 500 + 1)) + 500;
-//                        Thread.sleep(randomTime);
-//                    } catch (InterruptedException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                    synchronized (this){
-//                        addToList(new Capsula(variedad, intensidad));
-//                        System.out.println("Hilo Productor " + Thread.currentThread().threadId() + " c: Se ha fabricado una cápsula. Total en contenedor: " + lista.size());
-//                    }
-//                }
-//            synchronized (lista){
-//                lista.notify();
-//            }
-//        }
     }
     public void addToList(Capsula c){
         lista.add(c);
